@@ -1,25 +1,33 @@
+
 const prompt = require('prompt-sync')();
-for (let i = 0; i < 90; i++) {
-const num1 = prompt("Entrez un nombre : ");
+for (let i = 0; i < 900; i++) {
 
-const operateur = prompt("Entrez un opérateur (+, -, *, /, ^, √) : ");
+const operateur = prompt("Entrez un opérateur (+, -, *, /, ^, <) : ");
 
-const num2 = prompt("Entrez un autre nombre : ");
 
 switch (operateur) {
     case '+':
-        console.log(`Résultat : ${num1 + num2}`);
+         num1 = prompt("Entrez un nombre : ");
+       num2 = prompt("Entrez un autre nombre : ");
+add = parseFloat(num1)+parseFloat(num2);
+        console.log(`Résultat : ${add}`);
         break;
     
     case '-':
+         num1 = prompt("Entrez un nombre : ");
+num2 = prompt("Entrez un autre nombre : ");
         console.log(`Résultat : ${num1 - num2}`);
         break;
     
     case '*':
+           num1 = prompt("Entrez un nombre : ");
+num2 = prompt("Entrez un autre nombre : ");
         console.log(`Résultat : ${num1 * num2}`);
         break;
     
     case '/':
+      num1 = prompt("Entrez un nombre : ");
+ num2 = prompt("Entrez un autre nombre : ");
         if (num2 === 0) {
             console.log("Erreur : Division par zéro.");
         } else {
@@ -28,10 +36,13 @@ switch (operateur) {
         break;
 
     case '^':
+             num1 = prompt("Entrez un nombre : ");
+ num2 = prompt("Entrez un autre nombre : ");
         console.log(`Résultat : ${Math.pow(num1, num2)}`);
         break;
     
-    case '√': 
+    case '<': 
+      num1 = prompt("Entrez un nombre : ");
         if (num1 < 0) {
             console.log("Erreur ");
         } else {
